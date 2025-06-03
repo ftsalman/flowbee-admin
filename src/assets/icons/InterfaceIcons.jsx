@@ -82,8 +82,8 @@ export const IconCheverontDown = ({ size = "16", color = "currentColor" }) => {
 
 export const IconLanguage = ({ size = "16", color = "currentColor" }) => (
   <svg
-    width="32"
-    height="32"
+    width={size}
+    height={size}
     viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -254,6 +254,105 @@ export const IconUsersAlt3 = ({ size = "16", color = "currentColor" }) => (
 export const IconClock = ({size="16", color="currentColor"})=>(
   <svg width={size} height={size} viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.67188 1.92969C3.97937 1.92969 1.79688 4.11219 1.79688 6.80469C1.79688 9.49719 3.97937 11.6797 6.67188 11.6797C9.36438 11.6797 11.5469 9.49719 11.5469 6.80469C11.5469 4.11219 9.36438 1.92969 6.67188 1.92969ZM7.04688 3.80469C7.04688 3.70523 7.00737 3.60985 6.93704 3.53952C6.86671 3.4692 6.77133 3.42969 6.67188 3.42969C6.57242 3.42969 6.47704 3.4692 6.40671 3.53952C6.33638 3.60985 6.29688 3.70523 6.29688 3.80469V6.80469C6.29688 7.01169 6.46488 7.17969 6.67188 7.17969H8.92188C9.02133 7.17969 9.11671 7.14018 9.18704 7.06985C9.25737 6.99953 9.29688 6.90414 9.29688 6.80469C9.29688 6.70523 9.25737 6.60985 9.18704 6.53952C9.11671 6.4692 9.02133 6.42969 8.92188 6.42969H7.04688V3.80469Z" fill="#FFCA28"/>
+</svg>
+
+)
+
+
+
+export const IconSearch = ({ size = "16" }) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M20.9984 21.0004L16.6484 16.6504"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const IconFilterAlt2 = ({ size = "16" }) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 7 6"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g opacity="0.7">
+        <path
+          d="M3.26653 4.98202C3.23753 4.95377 3.11353 4.84709 3.01153 4.74773C2.37003 4.16516 1.32003 2.64544 0.999531 1.85002C0.948031 1.72922 0.839031 1.42381 0.832031 1.26063C0.832031 1.10428 0.868031 0.955228 0.941031 0.812997C1.04303 0.635696 1.20353 0.493465 1.39303 0.41553C1.52453 0.36536 1.91803 0.287425 1.92503 0.287425C2.35553 0.20949 3.05503 0.166626 3.82803 0.166626C4.56453 0.166626 5.23553 0.20949 5.67253 0.273299C5.67953 0.280606 6.16853 0.35854 6.33603 0.443781C6.64203 0.600138 6.83203 0.905545 6.83203 1.23238V1.26063C6.82453 1.47349 6.63453 1.92113 6.62753 1.92113C6.30653 2.67369 5.30803 4.15835 4.64453 4.75503C4.64453 4.75503 4.47403 4.92308 4.36753 4.99614C4.21453 5.11012 4.02503 5.16663 3.83553 5.16663C3.62403 5.16663 3.42703 5.10282 3.26653 4.98202Z"
+          fill="currentColor"
+        />
+      </g>
+    </svg>
+  );
+};
+
+
+export const IconRefresh = ({ size = "16" , color = "currentColor" }) => (
+
+  <svg width={size} height={size} viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.9609 4.27182C16.7287 5.55976 17.8776 7.64604 17.8776 10.0007C17.8776 13.9127 14.7063 17.084 10.7943 17.084H10.3776M6.6276 15.7295C4.85983 14.4415 3.71094 12.3553 3.71094 10.0007C3.71094 6.08863 6.88225 2.91732 10.7943 2.91732H11.2109M11.6276 18.6673L9.96094 17.0007L11.6276 15.334M9.96094 4.66732L11.6276 3.00065L9.96094 1.33398" stroke="#404557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+)
+
+
+export const IconPauseCircle = ({ size = "16" , color = "currentColor" }) => (
+
+ <svg width={size} height={size} viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_10771_5481)">
+<path d="M8.71094 12.4993V7.49935M12.8776 12.4993V7.49935M19.1276 9.99935C19.1276 14.6017 15.3966 18.3327 10.7943 18.3327C6.1919 18.3327 2.46094 14.6017 2.46094 9.99935C2.46094 5.39698 6.1919 1.66602 10.7943 1.66602C15.3966 1.66602 19.1276 5.39698 19.1276 9.99935Z" stroke="#404557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_10771_5481">
+<rect width="20" height="20" fill="white" transform="translate(0.796875)"/>
+</clipPath>
+</defs>
+</svg>
+
+
+)
+
+
+export const IconArrowCircle = ({ size = "16" , color = "currentColor" }) => (
+
+<svg width={size} height={size} viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_10771_5499)">
+<path d="M3.57585 5.83268C5.01672 3.34184 7.70982 1.66602 10.7943 1.66602C15.3967 1.66602 19.1277 5.39698 19.1277 9.99935C19.1277 14.6017 15.3967 18.3327 10.7943 18.3327C7.70982 18.3327 5.01672 16.6569 3.57585 14.166M10.7943 13.3327L14.1276 9.99935M14.1276 9.99935L10.7943 6.66602M14.1276 9.99935H2.46094" stroke="#404557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_10771_5499">
+<rect width="20" height="20" fill="white" transform="translate(0.796875)"/>
+</clipPath>
+</defs>
+</svg>
+
+
+)
+
+
+export const IconPlus = ({ size = "16", color = "currentColor" }) => (
+  <svg width={size} height={size} viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4974 4.16602V15.8327M4.66406 9.99935H16.3307" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
 )

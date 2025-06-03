@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { GreetHeader } from "../../Components/dashboard/GreetHeader";
-import { Button } from "../../ui/button/Button";
+import { GreetHeader } from "../Components/dashboard/GreetHeader";
+import { Button } from "../ui/button/Button";
 import {
   IconClock,
   IconSort,
   IconUsersAlt2,
   IconUsersAlt3,
-} from "../../assets/icons/InterfaceIcons";
-import { StatsCards } from "../../Components/dashboard/StatsCards";
-import PlanChartSection from "../../Components/dashboard/PlanChartSection";
-import { PlansStatsCard } from "../../Components/dashboard/PlansStatsCard";
-import { SectionHeader } from "../../Components/dashboard/SectionHeader";
-import PerformanceChart from "../../Components/dashboard/PerformanceChart";
+} from "../assets/icons/InterfaceIcons";
+import { StatsCards } from "../Components/dashboard/StatsCards";
+import PlanChartSection from "../Components/dashboard/PlanChartSection";
+import { PlansStatsCard } from "../Components/dashboard/PlansStatsCard";
+import { SectionHeader } from "../Components/dashboard/SectionHeader";
+import PerformanceChart from "../Components/dashboard/PerformanceChart";
 
 const dummyStats = {
   OPEN: 1300.03,
@@ -124,17 +124,10 @@ const DashboardPage = () => {
           />
         </div>
 
-         {/* PERFORMANCE CHART */}
-              <div className=" space-y-4">
-                <PerformanceChart/>
-
-
-
-
-              </div>
-
-
-
+        {/* PERFORMANCE CHART */}
+        <div className=" space-y-4">
+          <PerformanceChart />
+        </div>
       </div>
     </div>
   );
