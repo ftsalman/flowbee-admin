@@ -15,7 +15,7 @@ export const PageToolbar = ({
   return (
     <div
       className={cn(
-        "sticky top-0 rounded-xl overflow-x-auto rounded-b-none z-40 w-full p-3 flex flex-col items-start md:flex-row md:items-center gap-4 bg-white",
+        "sticky top-0 rounded-xl overflow-x-auto rounded-b-none z-40 w-full p-4 flex flex-col items-start md:flex-row md:items-center gap-4 bg-white",
         className
       )}
     >

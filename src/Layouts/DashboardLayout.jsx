@@ -28,26 +28,16 @@ const DashboardLayout = () => {
 
     
   return (
-     <div className="flex h-screen overflow-hidden relative">
-      {/* Sidebar */}
-      <Sidebar isOpen={isSidebarOpen} onToggle={handleToggleSidebar} />
-
-      {/* Overlay on small screens */}
-      {isSidebarOpen && window.innerWidth < 468 && (
+    <div className="overflow-clip h-[100dvh] flex flex-col bg-white">
+     
+      <Navbar />
+      <div className={` h-[calc(100dvh-9.75rem)] md:h-[calc(100dvh-7.5rem)] relative flex flex-grow`}>
+        <Sidebar />
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-10"
-          onClick={handleToggleSidebar}
-        />
-      )}
-
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col z-20">
-        {/* Navbar */}
-        <Navbar  />
-
-        {/* Page Content */}
-        <div className="flex-1 overflow-auto bg-[#F9F9F9] p-4 rounded-tl-3xl shadow-inner">
+          className={`dashboard-container overflow-auto overflow-x-hidden panel-scrollbar flex-grow h-[calc(100dvh-9.75rem)] md:h-[calc(100dvh-5.1rem)] md:rounded-tl-[20px] md:border-t-2 border-l-2  duration-300 border-gray-200 bg-[#F9F9F9]`}
+        >
           <Outlet />
+       
         </div>
       </div>
     </div>

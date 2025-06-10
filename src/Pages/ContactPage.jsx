@@ -3,6 +3,7 @@ import { PageToolbar } from "../ui/PageToolbar";
 import DataTableAlt from "../ui/DataTableAlt";
 import { Avathar } from "../ui/Avathar";
 import { IconPauseCircle, IconRefresh } from "../assets/icons/InterfaceIcons";
+import { PageContainer } from "../ui/PageContainer";
 
 const TABLE_CONFIG = [
   {
@@ -155,7 +156,7 @@ const ContactPage = () => {
   const [isLoading, setIsLoading] = useState();
 
   return (
-    <div className=" rounded-xl shadow">
+    <PageContainer className="pb-0 overflow-y-hidden">
       <PageToolbar
         pageHead="Contacts"
         className="bg-white font-semibold "
@@ -170,7 +171,7 @@ const ContactPage = () => {
           className="w-full max-w-full"
         />
       </div>
-    </div>
+  </PageContainer>
   );
 };
 

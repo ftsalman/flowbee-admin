@@ -192,7 +192,7 @@ const SettingsPage = () => {
 
   return (
     <>
-      <PageContainer className="">
+      <PageContainer className=" pb-0 overflow-y-hidden space-y-4">
         {/* PLANS SECTION  ⬇️*/}
 
         <SettingsSection
@@ -221,13 +221,14 @@ const SettingsPage = () => {
             </div>
           }
         >
+          
           <DataTableAlt
             columns={columns}
             data={planManagementData}
             isLoading={false}
             showPagination={false}
             tableClasses={{
-              thead: "bg-white border-b border-gray-200",
+              thead: "bg-white border-b  border-gray-200",
             }}
           />
         </SettingsSection>

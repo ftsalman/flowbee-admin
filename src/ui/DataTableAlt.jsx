@@ -207,7 +207,7 @@ const DataTableAlt = ({
           </table>
         </div>
         {showPagination && (
-          <div className="sticky inset-x-0 bottom-0 z-30 p-4 flex items-center  rounded-b-xl  justify-between gap-4 border-t border-gray-200 bg-white">
+          <div className="sticky inset-x-0 bottom-0 z-30 p-4 flex items-center  rounded-b-xl  justify-between gap-4 border-t border-gray-200">
             <p className="text-sm font-medium text-gray-500">
               {"page"} {pagination?.currPage}
             </p>

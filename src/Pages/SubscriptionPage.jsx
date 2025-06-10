@@ -179,7 +179,7 @@ const SubscriptionPage = ({}) => {
 
   return (
     <>
-      <div className=" rounded-xl shadow">
+      <PageContainer className=" pb-0">
         <PageToolbar
           pageHead="Subscriptions"
           className="bg-white font-semibold "
@@ -193,7 +193,7 @@ const SubscriptionPage = ({}) => {
             className="w-full max-w-full"
           />
         </div>
-      </div>
+      </PageContainer>
     </>
   );
 };

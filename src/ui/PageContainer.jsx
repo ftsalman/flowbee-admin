@@ -5,7 +5,7 @@ export const PageContainer = ({className="",children}) => {
   return (
      <div
       className={cn(
-        "h-[calc(100dvh-60px)] p-4 flex flex-col gap-4 bg-inherit",
+        " p-2 md:p-4 flex flex-col  bg-inherit ",
         className
       )}
     >

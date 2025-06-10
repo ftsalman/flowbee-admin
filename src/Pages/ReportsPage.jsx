@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { PageToolbar } from "../ui/PageToolbar";
 import DataTableAlt from "../ui/DataTableAlt";
 import { Avathar } from "../ui/Avathar";
+import { PageContainer } from "../ui/PageContainer";
 
 const TABLE_CONFIG = [
   {
@@ -131,7 +132,7 @@ const dummyData = [
 const ReportsPage = () => {
   const [reportsData, setReportsData] = useState(dummyData);
   return (
-    <div className=" rounded-xl shadow">
+    <PageContainer className="pb-0 overflow-y-hidden">
       <PageToolbar
         pageHead="Reports"
         className="bg-white font-semibold "
@@ -144,7 +145,7 @@ const ReportsPage = () => {
           data={reportsData}
         />
       </div>
-    </div>
+   </PageContainer>
   );
 };
 

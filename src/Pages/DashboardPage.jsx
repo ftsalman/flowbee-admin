@@ -5,7 +5,6 @@ import {
   IconClock,
   IconSort,
   IconUsersAlt2,
-  IconUsersAlt3,
 } from "../assets/icons/InterfaceIcons";
 import { StatsCards } from "../Components/dashboard/StatsCards";
 import PlanChartSection from "../Components/dashboard/PlanChartSection";
@@ -23,22 +22,21 @@ const dummyStats = {
 };
 
 const DashboardPage = () => {
-  // states
-  const [isLoadding, setIsloading] = useState();
+  const [isLoading, setIsLoading] = useState(false);
   const [dashboardData, setDashboardData] = useState(dummyStats);
 
   return (
-    <div className="flex flex-col lg:flex-row gap-4 overflow-x-hidden">
-      <div className="flex-1 space-y-6">
+    <div className="flex flex-col lg:flex-row gap-4 overflow-x-hidden ">
+      <div className="flex- space-y-6">
         {/* HEADER */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between px-4 py-1 gap-2">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between px-1 sm:px-6 md:px-8 py-2 gap-2">
           <GreetHeader
             isLoadding={false}
             userName="Muhammad Arshad"
             className="text-gray-800"
-            userNameClassName="md:text-lg text-sm"
+            userNameClassName="md:text-lg  text-sm"
           />
-          <div className="flex flex-wrap md:flex-nowrap items-center gap-2">
+          <div className="flex flex-wrap gap-2 justify-start md:justify-end">
             <Button variant="secondary">Last 90 Days</Button>
             <Button variant="secondary">Last 30 Days</Button>
             <Button
@@ -52,21 +50,21 @@ const DashboardPage = () => {
         </div>
 
         {/* STATS CARDS */}
-        <div className="px-4  border-b border-gray-200  pb-10">
-          <StatsCards isLoading={false} data={dashboardData} />
+        <div className="px-4 sm:px-6 md:px-8 border-b border-gray-200 pb-10">
+          <StatsCards isLoading={isLoading} data={dashboardData} />
         </div>
 
-        {/*CARDS/CHARTS */}
-
-        <div className="grid grid-cols-1  lg:grid-cols-2 gap-10 px-2">
-          {/* LEFT SIDE - Mini Cards */}
-          <div className="grid grid-cols-1 gap-2">
+        {/* CHARTS AND MINI CARDS */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-4 sm:px-6 md:px-8">
+          {/* LEFT SIDE */}
+          <div className="grid grid-cols-1 gap-6">
+            {/* Plan Details */}
             <div>
               <SectionHeader
                 head="Plan Details"
-                headClassName=" border-none font-bold"
+                headClassName="border-none font-bold"
               />
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-2">
+              <div className="grid grid-cols-1 md:grid-cols-3  gap-4 pt-2">
                 <PlansStatsCard
                   title="Expired"
                   count={213}
@@ -87,12 +85,13 @@ const DashboardPage = () => {
               </div>
             </div>
 
+            {/* Plan Wise Expiry */}
             <div>
               <SectionHeader
                 head="No of Expiring (Plan Wise)"
-                headClassName=" border-none font-bold"
+                headClassName="border-none font-bold"
               />
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-2">
+              <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10 pt-2 gap-4">
                 <PlansStatsCard
                   title="Starter"
                   count={100}
@@ -113,19 +112,22 @@ const DashboardPage = () => {
               </div>
             </div>
           </div>
+
           {/* RIGHT SIDE - Chart */}
-          <PlanChartSection
-            isLoading={false}
-            data={{
-              STARTER: 100,
-              SMART: 50,
-              PRO: 30,
-            }}
-          />
+          <div className="overflow-x-auto">
+            <PlanChartSection
+              isLoading={isLoading}
+              data={{
+                STARTER: 100,
+                SMART: 50,
+                PRO: 30,
+              }}
+            />
+          </div>
         </div>
 
         {/* PERFORMANCE CHART */}
-        <div className=" space-y-4">
+        <div className="px-4 sm:px-6 md:px-8 space-y-4 overflow-x-auto">
           <PerformanceChart />
         </div>
       </div>
