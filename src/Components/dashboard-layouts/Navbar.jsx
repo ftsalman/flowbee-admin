@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import { Avathar } from "../../ui/Avathar";
 import { Link } from "react-router-dom";
 import { Button } from "../../ui/button/Button";
-import {
-  IconBell,
-  IconCheverontDown,
-  IconHamburger,
-} from "../../assets/icons/InterfaceIcons";
+import { IconBell, IconCheverontDown } from "../../assets/icons/InterfaceIcons";
 import List from "../../ui/List";
 import { NavHamburger } from "../navbar/NavHamburger";
 
@@ -21,7 +17,7 @@ const languages = [
 const Navbar = () => {
   const [selectedLang, setSelectedLang] = useState("AE");
   const [isOpenLangMenu, setIsOpenLangMenu] = useState(false);
-  const [showProfileMenu, setShowProfileMenu] = useState(false); 
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
 
   const current = languages.find((lang) => lang.code === selectedLang);
 
@@ -39,8 +35,8 @@ const Navbar = () => {
     <>
       <div className="w-full h-[60px] flex-shrink-0  py-3 flex items-center justify-between gap-4 border-b-2 md:border-b-0 border-gray-200 bg-white">
         <div className="flex items-center gap-2 px-4">
-         {/* <NavHamburger /> */}
-         {/* <NavHamburger/> */}
+          {/* <NavHamburger /> */}
+          {/* <NavHamburger/> */}
 
           <img
             src="/public/svg/brand-logo/logo-flowbe-secondary.svg"

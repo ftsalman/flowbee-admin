@@ -51,7 +51,7 @@ const SidebarNavItem = ({
         )}
       >
         <span className="line-clamp-1 break-all">{label}</span>
-        {showExpandIcon && <IconCheverontDown />}
+        {showExpandIcon && <IconCheverontDown/>}
       </div>
     </NavLink>
   );
