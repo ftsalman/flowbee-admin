@@ -21,7 +21,7 @@ const languages = [
 const Navbar = () => {
   const [selectedLang, setSelectedLang] = useState("AE");
   const [isOpenLangMenu, setIsOpenLangMenu] = useState(false);
-  const [showProfileMenu, setShowProfileMenu] = useState(false); // ✅ Fix: add missing state
+  const [showProfileMenu, setShowProfileMenu] = useState(false); 
 
   const current = languages.find((lang) => lang.code === selectedLang);
 
