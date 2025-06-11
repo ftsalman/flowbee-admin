@@ -80,7 +80,7 @@ const AddpluginsDummyData = [
     GROWTH: "AED 399",
     PRO: "AED 399",
   },
-   {
+  {
     OPTIONS: "Appointment",
     STARTER: "AED 100.00",
     GROWTH: "AED 399",
@@ -92,21 +92,21 @@ const AddpluginsDummyData = [
     GROWTH: "AED 399",
     PRO: "AED 399",
   },
-  
 ];
 
 const columnsOtherPricing = [
-  { id: "1", head: "Options", key: "OPTIONS", align: "center" },
-  { id: "2", head: "Starter", key: "STARTER", align: "center" },
-  { id: "3", head: "Growth", key: "GROWTH", align: "center" },
-  { id: "4", head: "Pro", key: "PRO", align: "center" },
+  { id: "1", head: "Options", key: "OPTIONS", align: "" },
+  { id: "2", head: "Starter", key: "STARTER", align: "start" },
+  { id: "3", head: "Growth", key: "GROWTH", align: "start" },
+  { id: "4", head: "Pro", key: "PRO", align: "start" },
   {
     id: "4",
     head: "Action",
     key: "ACTIONS",
-    align: "center",
+    align: "start",
     render: (item) => (
       <ActionCell
+        className=" flex items-center justify-start"
         data={item}
         actions={{
           delete: (data) => createAction("delete", data),
@@ -221,7 +221,6 @@ const SettingsPage = () => {
             </div>
           }
         >
-          
           <DataTableAlt
             columns={columns}
             data={planManagementData}
