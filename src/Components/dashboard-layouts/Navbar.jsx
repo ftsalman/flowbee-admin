@@ -40,6 +40,7 @@ const Navbar = () => {
       <div className="w-full h-[60px] flex-shrink-0  py-3 flex items-center justify-between gap-4 border-b-2 md:border-b-0 border-gray-200 bg-white">
         <div className="flex items-center gap-2 px-4">
          {/* <NavHamburger /> */}
+         {/* <NavHamburger/> */}
 
           <img
             src="/public/svg/brand-logo/logo-flowbe-secondary.svg"
