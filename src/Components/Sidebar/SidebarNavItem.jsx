@@ -14,28 +14,32 @@ const SidebarNavItem = ({
   showBadge = false,
   ...rest
 }) => {
-
-     const { isExpanded } = useSidebar();
+  const { isExpanded } = useSidebar();
 
   const getClassess = ({ isActive }) => {
-    let classess =
+    const baseClasses =
       "h-10 px-2 min-w-10 flex-shrink-0 flex items-center justify-start gap-2 duration-300 border-0";
 
-    classess += isExpanded ? "w-full" : "w-10";
+    const widthClass = isExpanded ? "w-full" : "w-10";
 
     return cn(
       buttonVariants({
         variant: isActive ? "brand-primary" : "tertiary",
-        className:
-          "relative text-xs hover:bg-brand-primary-100 duration-300 border-0",
+        className: "relative text-xs hover:bg-brand-primary-100 duration-300 border-0",
       }),
-      classess
+      baseClasses,
+      widthClass
     );
   };
-  return (
-     <NavLink to={path} onClick={onClick} className={getClassess} {...rest}>
-    
 
+  return (
+    <NavLink
+      to={path}
+      onClick={onClick}
+      end
+      className={({ isActive }) => getClassess({ isActive })}
+      {...rest}
+    >
       {/* Icon */}
       {icon && <div className="min-w-6 flex justify-center">{icon}</div>}
 
@@ -48,10 +52,9 @@ const SidebarNavItem = ({
       >
         <span className="line-clamp-1 break-all">{label}</span>
         {showExpandIcon && <IconCheverontDown />}
-      
       </div>
     </NavLink>
-  )
-}
+  );
+};
 
-export default SidebarNavItem
+export default SidebarNavItem;

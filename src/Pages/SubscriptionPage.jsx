@@ -8,6 +8,7 @@ import {
   IconPauseCircle,
   IconRefresh,
 } from "../assets/icons/InterfaceIcons";
+import { FormDateCell } from "../Components/table-data/DataTabelCell";
 
 const SubscriptionPage = ({}) => {
   const TABLE_CONFIG = [
@@ -16,12 +17,20 @@ const SubscriptionPage = ({}) => {
       head: "Date",
       key: "DATE",
       isSortable: true,
+      align: "center",
       isFixed: false,
+      render: (row) => (
+        <FormDateCell
+          date={row?.DATE}
+          className=" flex  items-center justify-center  text-start"
+        />
+      ),
     },
     {
       id: "2",
       head: "Customer ID",
       key: "CUSTOMER_ID",
+      align: "center",
       isSortable: true,
       isFixed: false,
     },
@@ -71,9 +80,10 @@ const SubscriptionPage = ({}) => {
       className: "text-center", // for some table components like react-table
       isFixed: false,
       render: (row) => (
-        <div className="w-full text-center whitespace-nowrap ">
-          {row?.EXPIRY_DATE || "N/A"}
-        </div>
+        <FormDateCell date={row?.EXPIRY_DATE} />
+        // <div className="w-full text-center whitespace-nowrap ">
+        //   {row?.EXPIRY_DATE || "N/A"}
+        // </div>
       ),
     },
     {
