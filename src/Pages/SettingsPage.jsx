@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardContainer from "../ui/CardContainer";
 import { Button } from "../ui/button/Button";
 import {
@@ -95,10 +95,10 @@ const AddpluginsDummyData = [
 ];
 
 const columnsOtherPricing = [
-  { id: "1", head: "Options", key: "OPTIONS", align: "" },
-  { id: "2", head: "Starter", key: "STARTER", align: "start" },
-  { id: "3", head: "Growth", key: "GROWTH", align: "start" },
-  { id: "4", head: "Pro", key: "PRO", align: "start" },
+  { id: "1", head: "Options", key: "OPTIONS", align: "center" },
+  { id: "2", head: "Starter", key: "STARTER", align: "center" },
+  { id: "3", head: "Growth", key: "GROWTH", align: "center" },
+  { id: "4", head: "Pro", key: "PRO", align: "center" },
   {
     id: "4",
     head: "Action",
@@ -189,7 +189,10 @@ const SettingsPage = () => {
   const [planManagementData, setPlanManagementData] = useState(dummyData);
   const [otherPricingData, setOtherPricingData] = useState(otherDummyData);
   const [PluginsData, setPluginsData] = useState(AddpluginsDummyData);
+  const [isloading,setIsLoading] = useState("loading")
 
+
+   
   return (
     <>
       <PageContainer className=" pb-0 overflow-y-hidden space-y-4">

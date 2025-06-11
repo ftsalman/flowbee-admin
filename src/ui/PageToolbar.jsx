@@ -27,7 +27,7 @@ export const PageToolbar = ({
       </div>
 
       <div className="flex flex-col sm:flex-row items-center justify-end gap-4 flex-grow w-full">
-        <div className="w-full sm:w-max flex justify-end gap-4">
+        <div className="w-full sm:w-max flex xl:justify-end sm:justify-end md:justify-end gap-4">
           <div>
             <PageSearchBar />
           </div>

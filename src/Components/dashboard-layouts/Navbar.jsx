@@ -8,6 +8,7 @@ import {
   IconHamburger,
 } from "../../assets/icons/InterfaceIcons";
 import List from "../../ui/List";
+import { NavHamburger } from "../navbar/NavHamburger";
 
 // ✅ Language options
 const languages = [
@@ -18,7 +19,7 @@ const languages = [
 ];
 
 const Navbar = () => {
-  const [selectedLang, setSelectedLang] = useState("IN");
+  const [selectedLang, setSelectedLang] = useState("AE");
   const [isOpenLangMenu, setIsOpenLangMenu] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false); // ✅ Fix: add missing state
 
@@ -38,11 +39,13 @@ const Navbar = () => {
     <>
       <div className="w-full h-[60px] flex-shrink-0  py-3 flex items-center justify-between gap-4 border-b-2 md:border-b-0 border-gray-200 bg-white">
         <div className="flex items-center gap-2 px-4">
+         {/* <NavHamburger /> */}
+
           <img
             src="/public/svg/brand-logo/logo-flowbe-secondary.svg"
             alt="logo"
             width="125"
-            className="flex-shrink-0"
+            className="flex-shrink-0  w-20 sm:w-28 md:w-32 lg:w-36"
           />
         </div>
 
@@ -50,9 +53,9 @@ const Navbar = () => {
           {/* 🌐 Language Selector */}
           <div className="relative">
             <Button
-              variant="secondary"
+              variant="outline"
               onClick={() => setIsOpenLangMenu((prev) => !prev)}
-              className=""
+              className=" border border-gray-300 shadow"
             >
               <img
                 src={current?.flag}
