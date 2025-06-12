@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Button } from "../../ui/button/Button";
 import { IconBell, IconCheverontDown } from "../../assets/icons/InterfaceIcons";
 import List from "../../ui/List";
-import { NavHamburger } from "../navbar/NavHamburger";
 
 // ✅ Language options
 const languages = [
